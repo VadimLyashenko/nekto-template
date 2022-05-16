@@ -83,9 +83,9 @@ class SelectConstructor {
       const selectItems = data ? document.querySelectorAll(data) : document.querySelectorAll('select');
       if (selectItems.length) {
         this.selectsInit(selectItems);
-        this.setLogging(`Проснулся, построил селектов: (${selectItems.length})`);
+        this.setLogging(`selectors: (${selectItems.length})`);
       } else {
-        this.setLogging('Сплю, нет ни одного select zzZZZzZZz');
+        this.setLogging('Selectors not found');
       }
     }
   }
@@ -492,5 +492,3 @@ class SelectConstructor {
 }
 // Запускаем и добавляем в объект модулей
 flsModules.select = new SelectConstructor({});
-
-

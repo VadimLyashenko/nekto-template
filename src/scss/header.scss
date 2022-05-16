@@ -1,9 +1,156 @@
-//====================================================================================================
+.top-header {
+  max-height: 44px;
+  min-height: 44px;
+  background-color: $violet;
+  font-family: "Josefin Sans";
+  font-weight: 600;
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: inherit;
+  }
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
 
-//====================================================================================================
+.top-contact {
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+    color: $headGray;
+    padding-right: 10px;
+    &::before {
+      font-size: rem(14);
+      color: $white;
+      margin-right: em(10);
+    }
+  }
+  &:first-child {
+    @include adaptiveValue("padding-right", 40, 8, $widthTo: 767.98)
+  }
+}
 
-//Burger
-/*
+.top-panel {
+  display: flex;
+  color: $headGray;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__item {
+    padding-right: rem(18);
+    margin-right: rem(16);
+    &::after{
+      margin-left: 4px;
+      position: absolute;
+      @extend %ic;
+      color: $white;
+      font-size: rem(14);
+    }
+    &--login::after{
+      content: "\e902";
+    }
+    &--wish::after{
+      content: "\e903";
+    }
+  }
+  &__cart {
+    color: $white;
+    font-size: rem(24);
+    margin-left: rem(10);
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  } 
+}
+
+.m-top-panel {
+  display: none;
+  width: 100%;
+  color: $headGray;
+  font-size: 28px;
+  margin-right: 20px;
+  padding: 0 20px;
+  @media (max-width: $mobile) {
+      display: flex;
+      justify-content: space-between;
+  }
+}
+
+.body-header {
+  height: 80px;
+  background-color: $white;
+  &__container {
+    display: flex;
+    align-items: center;
+    height: inherit;
+  }
+  &__logo {
+    color: $textBlue;
+    font-family: "Josefin Sans";
+    font-weight: 700;
+    font-size: rem(34);
+    @include adaptiveValue("margin-right", 80, 4);
+    @media (max-width: $mobile) {
+    font-size: 24px;
+      flex: 1 1 auto;
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  flex: 1 1 auto;
+  color: $textBlue;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    @include adaptiveValue("column-gap", 35, 10);
+  }
+  &__link {
+    transition: 0.2s;
+  }
+  &__link:hover {
+    color: $accent;
+  }
+  // @media (max-width: $mobile) {
+  //   display: none;
+  // }
+}
+
+.search-header {
+  position: relative;
+  display: flex;
+  margin-left: 14px;
+  &__input {
+    color: $textBlue;
+    padding: 0 10px;
+    font-family: "Josefin Sans";
+    border: 2px solid #E7E6EF;
+    border-right: none;
+    height: 40px;
+    @include adaptiveValue("width", 300, 120);
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  &__button {
+    background: $accent;
+    font-size: 20px;
+    padding: 0 14px;
+    color: $white;
+  }
+}
+
 .icon-menu {
   display: none;
   @media (max-width: $mobile) {
@@ -22,7 +169,7 @@
       position: absolute;
       width: 100%;
       height: rem(2);
-      background-color: #000;
+      background-color: $headGray;
     }
     &::before {
       top: 0;
@@ -38,8 +185,8 @@
         width: 0;
       }
       &::before,
-      &::after {
-      }
+      // &::after {
+      // }
       &::before {
         top: calc(50% - rem(1));
         transform: rotate(-45deg);
@@ -51,4 +198,3 @@
     }
   }
 }
-*/
