@@ -1,4 +1,5 @@
 <header class="header">
+  <!-- top-header -->
   <div class="header__top top-header">
     <div class="top-header__container">
       <!-- desktop -->
@@ -10,21 +11,23 @@
           <a href="tel:+12051112222" class="top-contact__link icon-phone">+1 (205) 111-2222</a>
         </div>
       </div>
-      <div class="top-header__panel top-panel" data-one-select>
-        <select name="language-select[]" class="top-item-language">
-          <option value="en" selected>English</option>
-          <option value="2">Language 2</option>
-          <option value="3">Language 3</option>
-          <option value="4">Language 4</option>
-        </select>
-        <select name="currency-select[]" class="top-item-currency">
-          <option value="usd" selected>USD</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-        </select>
-        <a href="" class="top-panel__item top-panel__item--login">Login</a>
-        <a href="" class="top-panel__item top-panel__item--wish">Wishlist</a>
+      <div class="top-header__panel top-panel">
+        <div data-da=".menu__body, 767.98" class="top-panel__selects-wrap" data-one-select>
+          <select name="language-select[]" class="top-panel__select">
+            <option value="en" selected>English</option>
+            <option value="2">Language 2</option>
+            <option value="3">Language 3</option>
+            <option value="4">Language 4</option>
+          </select>
+          <select name="currency-select[]" class="top-panel__select">
+            <option value="usd" selected>USD</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </div>
+        <a href="" class="top-panel__item top-panel__item_icon_login">Login</a>
+        <a href="" class="top-panel__item top-panel__item_icon_wish">Wishlist</a>
         <a href="" class="top-panel__cart icon-cart"></a>
       </div>
       <!-- mobile -->
@@ -41,6 +44,7 @@
       </div>
     </div>
   </div>
+  <!-- body-header -->
   <div class="header__body body-header">
     <div class="body-header__container">
       <a href="" class="body-header__logo">Nekto</a>
@@ -53,7 +57,6 @@
             <li class="menu__item"><a href="" class="menu__link">FAQ</a></li>
             <li class="menu__item"><a href="" class="menu__link">About</a></li>
             <li class="menu__item"><a href="" class="menu__link">Contact</a></li>
-            <li class="menu__item"><a href="" class="menu__link">Pages</a></li>
           </ul>
         </nav>
       </div>

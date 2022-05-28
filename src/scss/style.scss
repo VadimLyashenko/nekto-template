@@ -55,11 +55,13 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
+  height: 2000px;
+  background: linear-gradient(45deg, red, blue);
   // Скролл заблокирован
-  .lock & {
-    overflow: hidden;
-    touch-action: none;
-  }
+  // .lock & {
+  //   overflow: hidden;
+  //   touch-action: none;
+  // }
   // Сайт загружен
   // .loaded & {
   // }

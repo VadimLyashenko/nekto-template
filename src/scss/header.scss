@@ -1,3 +1,8 @@
+.header {
+  position: fixed;
+  width: 100%;
+}
+
 .top-header {
   max-height: 44px;
   min-height: 44px;
@@ -45,6 +50,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  &__selects-wrap {
+    display: flex;
+    align-items: center;
+  }
   &__item {
     padding-right: rem(18);
     margin-right: rem(16);
@@ -55,10 +64,10 @@
       color: $white;
       font-size: rem(14);
     }
-    &--login::after{
+    &_icon_login::after{
       content: "\e902";
     }
-    &--wish::after{
+    &_icon_wish::after{
       content: "\e903";
     }
   }
@@ -84,9 +93,8 @@
     justify-content: space-between;
     flex: 1 1 auto;
     color: $headGray;
-    font-size: 28px;
-    margin-right: 20px;
-    padding: 0 20px;
+    font-size: rem(28);
+    margin-right: rem(40);
   }
 }
 
@@ -105,11 +113,18 @@
     font-size: rem(34);
     @include adaptiveValue("margin-right", 80, 4);
     @media (max-width: $mobile) {
-    font-size: 24px;
-      flex: 1 1 auto;
+      font-size: 24px;
     }
   }
 }
+
+// .hide-body-header {
+//   position: absolute;
+//   // width: 100%;
+//   top: -20%;
+//   // transition: top 0.3s ease 0s;
+//   // z-index: 4;
+// }
 
 .menu {
   display: flex;
@@ -164,6 +179,9 @@
   position: relative;
   display: flex;
   margin-left: 14px;
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
   &__input {
     color: $textBlue;
     padding: 0 10px;
@@ -171,7 +189,8 @@
     border: 2px solid #E7E6EF;
     border-right: none;
     height: 40px;
-    @include adaptiveValue("width", 300, 120);
+    width: 100%;
+    @include adaptiveValue("width", 300, 180, $widthTo: 767.98);
     &:focus-visible {
       outline: none;
     }

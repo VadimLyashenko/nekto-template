@@ -55,6 +55,7 @@
   &__options {
     color: $textBlue;
     position: absolute;
+    z-index: 5;
     top: 30px;
     border-radius: 0 0 4px 4px;
     min-width: 100%;
@@ -64,6 +65,9 @@
     border: 1px solid #d9d9d9;
     border-top: 0;
     // padding: 10px 0px 5px 0px;
+    @media (max-width: $mobile) {
+      position: relative;
+    }
   }
   // .select__scroll
   &__scroll {
