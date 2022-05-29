@@ -57,3 +57,13 @@ import { flsModules } from "./modules.js";
 //   window.addEventListener('scroll', checkScroll);
 
 // })();
+
+
+function toggleHeader () {
+  // let header = document.getElementsByClassName('body-header');
+  document.addEventListener('click', event => {
+    document.documentElement.classList.toggle("body-header-hidden");
+  });
+}
+
+toggleHeader ()

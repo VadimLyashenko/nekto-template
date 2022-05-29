@@ -106,6 +106,16 @@
     align-items: center;
     height: inherit;
   }
+  @media (max-width: $mobile) {
+    width: 100%;
+    top: 0;
+    transition: top 0.3s ease 0s;
+    .body-header-hidden & {
+      position: relative;
+      z-index: -1;
+      top: -80px;
+    }
+  }
   &__logo {
     color: $textBlue;
     font-family: "Josefin Sans";
@@ -117,14 +127,6 @@
     }
   }
 }
-
-// .hide-body-header {
-//   position: absolute;
-//   // width: 100%;
-//   top: -20%;
-//   // transition: top 0.3s ease 0s;
-//   // z-index: 4;
-// }
 
 .menu {
   display: flex;
