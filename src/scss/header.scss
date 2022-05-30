@@ -9,6 +9,8 @@
   background-color: $violet;
   font-family: "Josefin Sans";
   font-weight: 600;
+  position: relative;
+  z-index: 10;
   &__container {
     display: flex;
     justify-content: space-between;
@@ -95,26 +97,39 @@
     color: $headGray;
     font-size: rem(28);
     margin-right: rem(40);
+    .menu-open & {
+      opacity: 0;
+    }
   }
+
 }
 
 .body-header {
-  height: 80px;
+  padding: 20px 0;
   background-color: $white;
+  position: relative;
+  top: 0;
+  transition: all 0.3s ease 0s;
+  z-index: 5;
+  @media (max-width: $mobile) {
+    max-height: 80px;
+    position: relative;
+  }
+  &_scroll {
+    padding: 12px 0;
+    @media (max-width: $mobile) {
+      top: -64px;
+    }
+  }
+  &_show {
+    @media (max-width: $mobile) {
+      top: 0;
+    }
+  }
   &__container {
     display: flex;
     align-items: center;
     height: inherit;
-  }
-  @media (max-width: $mobile) {
-    width: 100%;
-    top: 0;
-    transition: top 0.3s ease 0s;
-    .body-header-hidden & {
-      position: relative;
-      z-index: -1;
-      top: -80px;
-    }
   }
   &__logo {
     color: $textBlue;
@@ -145,7 +160,7 @@
       right: -100%;
       overflow: auto;
       transition: right 0.3s ease 0s;
-      z-index: 4;
+      z-index: 10;
       background-color: $violet;
       color: $headGray;
       text-transform: uppercase;
@@ -170,7 +185,6 @@
   }
   &__link {
     transition: 0.2s;
-    // media
   }
   &__link:hover {
     color: $accent;
@@ -180,7 +194,7 @@
 .search-header {
   position: relative;
   display: flex;
-  margin-left: 14px;
+  margin-left: 10px;
   @media (max-width: $mobile) {
     width: 100%;
   }
@@ -192,7 +206,7 @@
     border-right: none;
     height: 40px;
     width: 100%;
-    @include adaptiveValue("width", 300, 180, $widthTo: 767.98);
+    @include adaptiveValue("width", 300, 160, $widthTo: 767.98);
     &:focus-visible {
       outline: none;
     }
@@ -213,7 +227,6 @@
     width: rem(30);
     height: rem(18);
     cursor: pointer;
-    z-index: 5;
     span,
     &::before,
     &::after {

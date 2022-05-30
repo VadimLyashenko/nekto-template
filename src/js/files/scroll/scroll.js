@@ -71,7 +71,7 @@ export function pageNavigation() {
 // Работа с шапкой при скроле
 export function headerScroll() {
   addWindowScrollEvent = true;
-  const header = document.querySelector('header.header');
+  const header = document.querySelector('div.body-header');
   const headerShow = header.hasAttribute('data-scroll-show');
   const headerShowTimer = header.dataset.scrollShow ? header.dataset.scrollShow : 500;
   const startPoint = header.dataset.scroll ? header.dataset.scroll : 1;
@@ -81,23 +81,23 @@ export function headerScroll() {
     const scrollTop = window.scrollY;
     clearTimeout(timer);
     if (scrollTop >= startPoint) {
-      !header.classList.contains('_header-scroll') ? header.classList.add('_header-scroll') : null;
+      !header.classList.contains('body-header_scroll') ? header.classList.add('body-header_scroll') : null;
       if (headerShow) {
         if (scrollTop > scrollDirection) {
           // downscroll code
-          header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+          header.classList.contains('body-header_show') ? header.classList.remove('body-header_show') : null;
         } else {
           // upscroll code
-          !header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
+          !header.classList.contains('body-header_show') ? header.classList.add('body-header_show') : null;
         }
-        timer = setTimeout(() => {
-          !header.classList.contains('_header-show') ? header.classList.add('_header-show') : null;
-        }, headerShowTimer);
+        // timer = setTimeout(() => {
+        //   !header.classList.contains('body-header_show') ? header.classList.add('body-header_show') : null;
+        // }, headerShowTimer);
       }
     } else {
-      header.classList.contains('_header-scroll') ? header.classList.remove('_header-scroll') : null;
+      header.classList.contains('body-header_scroll') ? header.classList.remove('body-header_scroll') : null;
       if (headerShow) {
-        header.classList.contains('_header-show') ? header.classList.remove('_header-show') : null;
+        header.classList.contains('body-header_show') ? header.classList.remove('body-header_show') : null;
       }
     }
     scrollDirection = scrollTop <= 0 ? 0 : scrollTop;
