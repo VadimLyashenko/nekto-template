@@ -55,13 +55,14 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-  height: 2000px;
-  background: linear-gradient(45deg, red, blue);
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  height: 1200px;
+  background: linear-gradient(45deg, red, blue) no-repeat fixed;
   // Скролл заблокирован
-  // .lock & {
-  //   overflow: hidden;
-  //   touch-action: none;
-  // }
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
   // Сайт загружен
   // .loaded & {
   // }

@@ -2,6 +2,9 @@
 // Снипет (HTML): sel
 .select {
   position: relative;
+  @media (max-width: $mobile) {
+    padding: rem(20);
+  }
   // .select__body
   &__body {
     position: relative;
@@ -13,6 +16,9 @@
     cursor: pointer;
     width: 100%;
     font-family: "Josefin Sans";
+    @media (max-width: $mobile) {
+      font-size: rem(28);
+    }
   }
   // .select__value
   &__value {
@@ -26,7 +32,7 @@
     &:after {
       content: url("data:image/svg+xml,<svg fill='white' width='10' height='10' viewBox='0 0 18 10' xmlns='http://www.w3.org/2000/svg'><path d='M.293.293a1 1 0 0 1 1.414 0L9 7.586 16.293.293a1 1 0 1 1 1.414 1.414l-8 8a1 1 0 0 1-1.414 0l-8-8a1 1 0 0 1 0-1.414Z'/></svg>");
       align-self: stretch;
-      flex: 0 0 10px;
+      flex: 0 0 rem(10);
       transition: all 0.2s ease 0s;
       display: flex;
       justify-content: center;
@@ -56,7 +62,7 @@
     color: $textBlue;
     position: absolute;
     z-index: 5;
-    top: 30px;
+    top: rem(30);
     border-radius: 0 0 4px 4px;
     min-width: 100%;
     left: 0;
@@ -64,9 +70,13 @@
     border-top: 0;
     border: 1px solid #d9d9d9;
     border-top: 0;
-    // padding: 10px 0px 5px 0px;
     @media (max-width: $mobile) {
+      margin-top: rem(10);
       position: relative;
+      background-color: inherit;
+      border: none;
+      top: 0;
+      font-size: rem(20);
     }
   }
   // .select__scroll
@@ -97,7 +107,14 @@
     @media (any-hover: hover) {
       &:hover {
         background: #d9d9d9;
+        @media (max-width: $mobile) {
+          background: inherit;
+        }
       }
+    }
+    @media (max-width: $mobile) {
+      color: $headGray;
+      padding: rem(10) 0;
     }
   }
 
