@@ -4,10 +4,10 @@
 }
 
 .top-header {
-  max-height: 44px;
+  max-height: rem(44);
   min-height: 44px;
   background-color: $violet;
-  font-family: "Josefin Sans";
+  font-family: "Josefin Sans", serif;
   font-weight: 600;
   position: relative;
   z-index: 10;
@@ -212,9 +212,8 @@
     width: 100%;
   }
   &__input {
-    color: $textBlue;
+    color: $saleTag;
     padding: 0 10px;
-    font-family: "Josefin Sans";
     border: 2px solid #E7E6EF;
     border-right: none;
     height: 40px;
