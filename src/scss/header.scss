@@ -12,12 +12,14 @@
   font-weight: 600;
   position: relative;
   z-index: 10;
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     min-height: inherit;
   }
+
   &__contacts {
     display: flex;
     justify-content: space-between;
@@ -28,6 +30,7 @@
 }
 
 .top-contact {
+  
   &__link {
     display: flex;
     align-items: center;
@@ -41,6 +44,7 @@
       margin-right: em(10);
     }
   }
+
   &:first-child {
     @include adaptiveValue("padding-right", 40, 8, $widthTo: 767.98)
   }
@@ -53,6 +57,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (max-width: $mobile) {
+    display: none;
+  }
+
   &__selects-wrap {
     display: flex;
     align-items: center;
@@ -61,6 +70,7 @@
       padding: rem(20);
     }
   }
+
   &__item {
     padding-right: rem(18);
     margin-right: rem(16);
@@ -78,23 +88,23 @@
       content: "\e903";
     }
   }
+
   &__cart {
     color: $white;
     font-size: rem(24);
     margin-left: rem(10);
   }
-  @media (max-width: $mobile) {
-    display: none;
-  } 
 }
 
 .m-top-panel {
   display: none;
   flex: 1 1 auto;
   justify-content: space-between;
+
   @media (max-width: $mobile) {
     display: flex;
   }
+
   &__links {
     display: flex;
     justify-content: space-between;
@@ -106,7 +116,6 @@
       opacity: 0;
     }
   }
-
 }
 
 .body-header {
@@ -116,26 +125,31 @@
   top: 0;
   transition: all 0.3s ease 0s;
   z-index: 5;
+
   @media (max-width: $mobile) {
     max-height: 80px;
     position: relative;
   }
+
   &_scroll {
     padding: 12px 0;
     @media (max-width: $mobile) {
       top: -64px;
     }
   }
+
   &_show {
     @media (max-width: $mobile) {
       top: 0;
     }
   }
+
   &__container {
     display: flex;
     align-items: center;
     height: inherit;
   }
+
   &__logo {
     color: $textBlue;
     font-family: "Josefin Sans";
@@ -152,10 +166,12 @@
   display: flex;
   flex: 1 1 auto;
   color: $textBlue;
+
   @media (max-width: $mobile) {
     flex: 0 0 auto;
     align-items: center;
   }
+
   &__body {
     @media (max-width: $mobile) {
       position: fixed;
@@ -175,6 +191,7 @@
       }
     }
   }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
@@ -189,6 +206,7 @@
       padding-top: rem(24);
     }
   }
+
   &__item {
     @media (max-width: $mobile) {
       border-bottom: 2px solid rgba(0, 0, 0, 0.1);
@@ -197,9 +215,11 @@
       padding-bottom: rem(20)
     }
   }
+
   &__link {
     transition: 0.2s;
   }
+
   &__link:hover {
     color: $accent;
   }
@@ -209,9 +229,11 @@
   position: relative;
   display: flex;
   margin-left: 10px;
+
   @media (max-width: $mobile) {
     width: 100%;
   }
+
   &__input {
     color: $saleTag;
     padding: 0 10px;
@@ -224,6 +246,7 @@
       outline: none;
     }
   }
+
   &__button {
     background: $accent;
     font-size: 20px;
@@ -234,6 +257,7 @@
 
 .icon-menu {
   display: none;
+  
   @media (max-width: $mobile) {
     display: block;
     position: relative;

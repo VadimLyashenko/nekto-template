@@ -6,7 +6,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Navigation } from 'swiper';
+import Swiper, { Pagination, Autoplay } from 'swiper';
 /*
 Основниые модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -16,28 +16,33 @@ EffectFade, Lazy, Manipulation
 
 // Стили Swiper
 // Базовые стили
-import "../../scss/base/swiper.scss";
+// import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
 // Инициализация слайдеров
 function initSliders() {
   // Перечень слайдеров
-  // Проверяем, есть ли слайдер на стронице
-  if (document.querySelector('.swiper')) { // Указываем скласс нужного слайдера
+  // Проверяем, есть ли слайдер на странице
+  if (document.querySelector('.swiper')) { // Указываем класс нужного слайдера
     // Создаем слайдер
     new Swiper('.swiper', { // Указываем скласс нужного слайдера
       // Подключаем модули слайдера
       // для конкретного случая
-      modules: [Navigation],
+      modules: [Pagination, Autoplay],
       observer: true,
       observeParents: true,
       slidesPerView: 1,
       spaceBetween: 0,
       autoHeight: true,
       speed: 800,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+      },
 
       //touchRatio: 0,
       //simulateTouch: false,
@@ -55,12 +60,11 @@ function initSliders() {
       */
 
       // Пагинация
-      /*
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
-      */
+      
 
       // Скроллбар
       /*
@@ -71,10 +75,10 @@ function initSliders() {
       */
 
       // Кнопки "влево/вправо"
-      navigation: {
-        prevEl: '.swiper-button-prev',
-        nextEl: '.swiper-button-next',
-      },
+      // navigation: {
+      //   prevEl: '.swiper-button-prev',
+      //   nextEl: '.swiper-button-next',
+      // },
 
       // Брейкпоинты
       /*
