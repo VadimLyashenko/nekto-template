@@ -1,0 +1,39 @@
+.page-headline {
+  background-color: #EEEFFB;
+
+  &__container {
+    @include adaptiveValue("padding-top", 100, 10);
+    @include adaptiveValue("padding-bottom", 100, 10);
+  }
+
+  &__headline {
+    font-family: 'Josefin Sans', serif;
+    font-weight: 700;
+    line-height: math.div(46, 36);
+    font-size: rem(36);
+    color: #101750;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__breadcrumbs {
+    list-style-type: none;
+    color: $accent;
+    li {
+      display: inline;
+      font-weight: 500;
+    }
+    li+li::before {
+      color: $black;
+      padding: 8px;
+      content: ".";
+    }
+    li:last-child::before {
+      color: $accent;
+    }
+    li a {
+      color: $black;
+    }
+  }
+}

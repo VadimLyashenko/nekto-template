@@ -41,7 +41,7 @@ $maxWidthContainer: 1180;
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 30;
 
-// Ширина срабатывания первого брейкпоинта
+// Ширина срабатывания первого брейкпоинта  
 $containerWidth: $maxWidthContainer + $containerPadding;
 
 // Брейк-поинты
@@ -155,7 +155,7 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
-@import "slider";
+@import "components/page-headline";
 
 // Подключение стилей отдельных страниц
-@import "home";
+@import "home/home";
