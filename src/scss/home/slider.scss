@@ -53,18 +53,6 @@
     }
   }
 
-  &__button {
-    font-size: rem(17);
-    font-weight: 600;
-    font-family: 'Josefin Sans', serif;
-    color: $white;
-    background-color: $accent;
-    line-height: math.div(50, 17);
-    display: inline-block;
-    border-radius: 2px;
-    padding: 0 40px;
-  }
-
   &__img {
     position: absolute;
     top: 0;

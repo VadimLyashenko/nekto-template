@@ -155,7 +155,8 @@ body {
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
-@import "components/page-headline";
+@import "components/common/button";
+@import "components/common/page-headline";
 
 // Подключение стилей отдельных страниц
 @import "home/home";
