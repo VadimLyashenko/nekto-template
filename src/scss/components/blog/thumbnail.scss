@@ -1,0 +1,29 @@
+.thumbnail {
+  max-width: rem(250);
+  display: grid;
+  grid-template-columns: rem(70) auto;
+  grid-column-gap: rem(6);
+
+  img {
+    width: rem(70);
+    max-height: rem(51);
+    object-fit: cover;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border-radius: 1px;
+  }
+
+  &__link {
+    color: $saleTag;
+    font-family: 'Josefin Sans', serif;
+    font-weight: 400;
+    font-size: rem(14);
+    padding-top: rem(4);
+  }
+
+  &__date {
+    font-weight: 600;
+    font-size: rem(11);
+    color: $mainColor;
+  }
+}
