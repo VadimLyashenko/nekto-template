@@ -1,0 +1,134 @@
+.featured {
+  max-width: rem(270);
+  box-shadow: 1px 0px 26px -3px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: $prodText;
+  &:hover {
+    color: #fff;
+  }
+  &:hover &__icon {
+    visibility: visible;
+    opacity: 1;
+  }
+  &:hover &__details {
+    background: #2F1AC4;
+  }
+  &:hover &__name {
+    color: #fff;
+  }
+  &:hover &__code {
+    &_value:hover {
+      color: #bbb;
+    }
+  }
+
+  &__img {
+    position: relative;
+    background-color: #F6F7FB;
+    width: 100%;
+    padding: rem(38) rem(38) rem(12) rem(38);
+    img {
+      width: 100%;
+      cursor: zoom-in;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.3s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: rem(20);
+    background:linear-gradient(to right bottom, #1389FF, #1DB4E7);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    &:hover {
+      background: #2F1AC4;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  
+  & .icon-cart {
+    top: 7%;
+    left: 7%;
+  }
+
+  & .icon-heart {
+    top: 7%;
+    left: 20%;
+    font-size: rem(18);
+  }
+
+  & .icon-zoom {
+    cursor: zoom-in;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: rem(24);
+  }
+
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: rem(4)  rem(4)  rem(17) rem(4);
+    transition: all 0.3s ease 0s;
+  }
+
+  &__name {
+    transition: all 0.3s ease 0s;
+    font-weight: 700;
+    font-size: rem(18);
+    line-height: rem(48);
+    color: $accent;
+  }
+
+  &__colors {
+    display: flex;
+    justify-content: center;
+    gap: rem(5);
+  }
+
+  &__color {
+    height: rem(4);
+    width: rem(14);
+    border-radius: rem(10);
+
+    &_acc1 {
+      background: $accent3;
+    }
+
+    &_acc2 {
+      background: $accent;
+    }
+
+    &_acc3 {
+      background: $accent2;
+    }
+  }
+
+  &__code {
+    font-family: 'Josefin Sans', serif;
+    font-weight: 400;
+    font-size: rem(14);
+    line-height: rem(42);
+    &_value {
+      cursor: pointer;
+      &:hover {
+        color: $saleTag;
+      }
+    }
+  }
+
+  &__cost {
+    font-weight: 400;
+    font-size: rem(14);
+  }
+}
+

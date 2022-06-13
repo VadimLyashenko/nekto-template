@@ -24,11 +24,14 @@ $violet: #7E33E0;
 $white: #fff;
 $headGray: #f1f1f1;
 $accent: #fb2e86;
+$accent2: #00009D;
+$accent3: #05E6B7;
 $textBlue: #0D0E43;
 $top-footer-bg: #EEEFFB;
 $bottom-footer-bg: #E7E4F8;
 $black: #000;
 $saleTag: #3F509E;
+$prodText: #151875;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -161,6 +164,7 @@ body {
 @import "components/blog/preview";
 @import "components/blog/big-preview";
 @import "components/blog/thumbnail";
+@import "components/products/featured";
 
 // Подключение стилей отдельных страниц
 @import "home/home";
