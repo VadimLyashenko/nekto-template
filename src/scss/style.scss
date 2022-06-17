@@ -21,11 +21,13 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #8A8FB9; // Цвет шрифта по умолчанию
 $violet: #7E33E0;
+$violet2: #9877E7;
 $white: #fff;
 $headGray: #f1f1f1;
 $accent: #fb2e86;
 $accent2: #00009D;
 $accent3: #05E6B7;
+$accent4: #08D15F;
 $textBlue: #0D0E43;
 $top-footer-bg: #EEEFFB;
 $bottom-footer-bg: #E7E4F8;
@@ -167,6 +169,7 @@ body {
 @import "components/products/featured";
 @import "components/products/latest";
 @import "components/products/trending";
+@import "components/products/category";
 
 // Подключение стилей отдельных страниц
 @import "home/home";

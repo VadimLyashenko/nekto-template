@@ -8,4 +8,8 @@
   display: inline-block;
   border-radius: 2px;
   padding: 0 40px;
+  
+  &_color_green {
+    background-color: $accent4;;
+  }
 }

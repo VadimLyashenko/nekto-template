@@ -5,7 +5,7 @@
   })
   <body>
     <div class="wrapper">
-      @@include('html/_header.htm',{})
+      @@include('html/_header.htm',{}) 
       <main class="page">
         <!-- @@include('html/home/_slider.htm', {}) -->
         <br>
@@ -20,7 +20,16 @@
 <!-- components: -->
 
 <!-- button -->
-<!-- @@include('html/components/common/_button.htm', {"text": "Shop Now", "link": "shop.html"}) -->
+<!-- @@include('html/components/common/_button.htm', {
+  "text": "Shop Now",
+  "link": "shop.html",
+  "mod": ""
+})
+@@include('html/components/common/_button.htm', {
+  "text": "View Shop",
+  "link": "shop.html",
+  "mod": " button_color_green"
+}) -->
 
 <!-- page-headline -->
 <!-- @@include('html/components/common/_page-headline.htm', {
@@ -87,4 +96,11 @@
   "image": "../../../img/products/chairs/chair_12.png",
   "cost": "26.00",
   "old_cost": "42.00"
+}) -->
+
+<!-- product category -->
+<!-- @@include('html/components/products/_category.htm', {
+  "name": "Mini LCW Chair",
+  "image": "../../../img/products/chairs/chair_13.png",
+  "cost": "56.00"
 }) -->
