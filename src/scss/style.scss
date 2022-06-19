@@ -28,6 +28,9 @@ $accent: #fb2e86;
 $accent2: #00009D;
 $accent3: #05E6B7;
 $accent4: #08D15F;
+$accent5: #DE9034;
+$accent6: #EC42A2;
+$accent7: #8568FF;
 $textBlue: #0D0E43;
 $top-footer-bg: #EEEFFB;
 $bottom-footer-bg: #E7E4F8;
@@ -170,6 +173,7 @@ body {
 @import "components/products/latest";
 @import "components/products/trending";
 @import "components/products/category";
+@import "components/products/product";
 
 // Подключение стилей отдельных страниц
 @import "home/home";
