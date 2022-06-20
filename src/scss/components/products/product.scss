@@ -98,30 +98,6 @@
     line-height: math.div(32, 18);
   }
 
-  &__colors {
-    display: flex;
-    justify-content: center;
-    gap: rem(6);
-  }
-
-  &__color {
-    height: rem(10);
-    width: rem(10);
-    border-radius: 50%;
-
-    &_acc1 {
-      background: $accent5;
-    }
-
-    &_acc2 {
-      background: $accent6;
-    }
-
-    &_acc3 {
-      background: $accent7;
-    }
-  }
-
   &__cost {
     font-size: rem(14);
     line-height: math.div(38, 14);

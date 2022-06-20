@@ -7,11 +7,11 @@
   </div>
   <div class="product__details">
     <a href="" class="product__name">@@name</a>
-    <div class="product__colors">
-      <div class="product__color product__color_acc1"></div>
-      <div class="product__color product__color_acc2"></div>
-      <div class="product__color product__color_acc3"></div>
-    </div>
+    @@include('../common/_colors.htm', {
+      "color_1": "#DE9034",
+      "color_2": "#EC42A2",
+      "color_3": "#8568FF"
+    })
     <span class="product__cost">
       $@@cost &nbsp;
       <span class="product__old-cost">$@@old_cost</span>
