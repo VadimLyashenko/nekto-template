@@ -1,0 +1,28 @@
+<div class="extend">
+  <div class="extend__img">
+    <img src="@@image" alt="">
+    <i class="extend__icon icon-zoom"></i>
+  </div>
+  <div class="extend__details">
+    <div class="extend__details-top">
+      <a href="" class="extend__name">@@name</a>
+      @@include('../common/_colors.htm', {
+        "color_1": "#DE9034",
+        "color_2": "#EC42A2",
+        "color_3": "#8568FF"
+      })
+    </div>
+    <span class="extend__cost">
+      $@@cost &nbsp;
+      <span class="extend__old-cost">$@@old_cost</span>
+    </span>
+    <!-- rating -->
+    <p class="extend__description">
+      @@description
+    </p>
+    <div class="extend__icons">
+      <i class="extend__icon icon-cart"></i>
+      <i class="extend__icon icon-heart"></i>
+    </div>
+  </div>
+</div>

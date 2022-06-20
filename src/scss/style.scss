@@ -166,6 +166,7 @@ body {
 @import "components/common/button";
 @import "components/common/page-headline";
 @import "components/common/brands";
+@import "components/common/colors";
 @import "components/blog/preview";
 @import "components/blog/big-preview";
 @import "components/blog/thumbnail";
@@ -174,6 +175,7 @@ body {
 @import "components/products/trending";
 @import "components/products/category";
 @import "components/products/product";
+@import "components/products/extend";
 
 // Подключение стилей отдельных страниц
 @import "home/home";
