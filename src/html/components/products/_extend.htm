@@ -15,8 +15,15 @@
     <span class="extend__cost">
       $@@cost &nbsp;
       <span class="extend__old-cost">$@@old_cost</span>
+      @@include('../common/_rating.htm', {
+        "star_1_color": "yellow",
+        "star_2_color": "yellow",
+        "star_3_color": "yellow",
+        "star_4_color": "yellow",
+        "star_5_color": "gray",
+        "count": 43
+      })
     </span>
-    <div class="rating"></div>
     <p class="extend__description">
       @@description
     </p>

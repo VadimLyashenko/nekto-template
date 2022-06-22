@@ -77,17 +77,19 @@
     align-items: center;
     gap: rem(64);
     @media(max-width: $mobileSmall){
-      gap: rem(32);
+      gap: rem(24);
     }
   }
 
   &__name {
     font-weight: 700;
     font-size: rem(18);
-    line-height: math.div(38, 18);
+    line-height: math.div(24, 18);
   }
 
   &__cost {
+    display: inline-block;
+    margin-top: rem(12);
     font-size: rem(14);
     line-height: math.div(22, 14);
   }
@@ -96,6 +98,7 @@
     text-decoration: line-through;
     font-size: rem(14);
     color: #FF2AAA;
+    margin-right: rem(16);
   }
 
   &__description {
