@@ -16,11 +16,13 @@
   &__img {
     position: relative;
     max-width: rem(284);
+    min-width: rem(284);
     &:hover .icon-zoom {
       opacity: 0.9;
     }
     @media(max-width: $mobile) {
       max-width: 100%;
+      min-width: rem(140);
     }
     img {
       width: 100%;
@@ -75,7 +77,8 @@
     margin-top: rem(10);
     display: flex;
     align-items: center;
-    gap: rem(64);
+    justify-content: space-between;
+    gap: rem(16);
     @media(max-width: $mobileSmall){
       gap: rem(24);
     }
@@ -84,14 +87,18 @@
   &__name {
     font-weight: 700;
     font-size: rem(18);
-    line-height: math.div(24, 18);
+    line-height: math.div(22, 18);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   &__cost {
     display: inline-block;
     margin-top: rem(12);
     font-size: rem(14);
-    line-height: math.div(22, 14);
+    line-height: math.div(20, 14);
   }
 
   &__old-cost {
@@ -102,17 +109,21 @@
   }
 
   &__description {
-    margin: rem(12) 0;
+    margin: rem(10) 0;
     font-family: 'Lato', sans-serif;
     color: #9295AA;
-    line-height: math.div(28, 16);
+    line-height: math.div(26, 16);
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
     @media(max-width: $mobileSmall){
       font-size: rem(14);
     }
   }
 
   &__icons {
-    margin-top: rem(16);
+    margin-top: rem(14);
     display: flex;
     align-items: center;
     gap: rem(30);
