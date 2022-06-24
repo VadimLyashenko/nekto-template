@@ -1,0 +1,32 @@
+.alert {
+  position: fixed;
+  z-index: 1000;
+  padding: inherit;
+  margin: inherit;
+  top: rem(20);
+  right: -100%;
+  display: flex;
+  align-items: center;
+  width: rem(240);
+  justify-content: space-between;
+  padding: rem(20);
+  box-shadow: 0px 0px 8px 4px #eee;
+  background-image: linear-gradient(to right, #C9F2D9, #fff 30%);
+  transition: right 0.6s ease;
+
+  .show-alert & {
+    right: rem(20);
+  }
+
+  &__icon {
+    font-size: rem(24);
+    color: $accent4;
+  }
+
+  &__text {
+    display: inline-block;
+    margin-top: rem(4);
+    font-size: rem(18);
+    font-family: 'Josefin Sans', serif;
+  }
+}
