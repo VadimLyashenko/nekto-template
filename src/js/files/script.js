@@ -4,6 +4,15 @@ import { isMobile } from "./functions.js";
 import { flsModules } from "./modules.js";
 
 let page = document.querySelector("main")
+let productsCodes = document.querySelectorAll('.featured__code_value')
+
+productsCodes.forEach(code => {
+  code.addEventListener('click', () => {
+    navigator.clipboard.writeText(code.innerText).then(() => {
+      showAlert()
+    });
+  })
+})
 
 function showAlert() {
   if (page.classList.contains("show-alert")) return
