@@ -19,3 +19,26 @@ function showAlert() {
   setTimeout(() => page.classList.remove("show-alert"), 3600)
   page.classList.add("show-alert")
 }
+
+let galleries = document.querySelectorAll('[data-gallery]')
+
+galleries.forEach(gallery => {
+  gallery.addEventListener('click', () => {
+    const newItems = [
+      {
+        src: '../img/products/chairs/chair_9.png',
+        thumb: '../img/products/chairs/chair_9.png',
+      },
+      {
+        src: '../img/products/chairs/chair_1.png',
+        thumb: '../img/products/chairs/chair_1.png',
+      },
+      {
+        src: '../img/products/chairs/chair_2.png',
+        thumb: '../img/products/chairs/chair_2.png',
+      },
+    ];
+    flsModules.gallery[0].galleryClass.refresh(newItems);
+    flsModules.gallery[0].galleryClass.openGallery()
+  })
+})
