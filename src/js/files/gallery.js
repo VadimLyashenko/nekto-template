@@ -42,8 +42,8 @@ if (galleries.length) {
     galleyItems.push({
       gallery,
       galleryClass: lightGallery(gallery, {
-        dynamic: true,
         plugins: [lgZoom, lgThumbnail],
+        dynamic: true,
         download: false,
         licenseKey: '7EC452A9-0CFD441C-BD984C7C-17C8456E',
         speed: 500,

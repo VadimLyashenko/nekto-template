@@ -23,22 +23,38 @@ function showAlert() {
 let galleries = document.querySelectorAll('[data-gallery]')
 
 galleries.forEach(gallery => {
+
+  flsModules.gallery[0].galleryClass.getMediaContainerPosition = function () {
+    var top = this.$toolbar.get().clientHeight || 0;
+    var thumbContainer = this.outer.find('.lg-thumb-outer').get();
+    var thumbHeight = thumbContainer ? 100 : 0;
+    var bottom = thumbHeight;
+    return {
+        top: top,
+        bottom: bottom,
+    };
+  }
+
   gallery.addEventListener('click', () => {
-    const newItems = [
+    const items = [
       {
-        src: '../img/products/chairs/chair_9.png',
-        thumb: '../img/products/chairs/chair_9.png',
+        src: '../img/products/chairs/chair_1/gallery_1.png',
+        thumb: '../img/products/chairs/chair_1/chair_1.png',
       },
       {
-        src: '../img/products/chairs/chair_1.png',
-        thumb: '../img/products/chairs/chair_1.png',
+        src: '../img/products/chairs/chair_1/gallery_1.png',
+        thumb: '../img/products/chairs/chair_1/chair_1.png',
+      },
+      {
+        src: '../img/products/chairs/chair_2.png',
+        thumb: '../img/products/chairs/chair_2.png',
       },
       {
         src: '../img/products/chairs/chair_2.png',
         thumb: '../img/products/chairs/chair_2.png',
       },
     ];
-    flsModules.gallery[0].galleryClass.refresh(newItems);
+    flsModules.gallery[0].galleryClass.refresh(items)
     flsModules.gallery[0].galleryClass.openGallery()
   })
 })
