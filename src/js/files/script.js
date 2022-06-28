@@ -42,16 +42,16 @@ galleries.forEach(gallery => {
         thumb: '../img/products/chairs/chair_1/chair_1.png',
       },
       {
-        src: '../img/products/chairs/chair_1/gallery_1.png',
+        src: '../img/products/chairs/chair_1/gallery_2.png',
         thumb: '../img/products/chairs/chair_1/chair_1.png',
       },
       {
-        src: '../img/products/chairs/chair_2.png',
-        thumb: '../img/products/chairs/chair_2.png',
+        src: '../img/products/chairs/chair_1/gallery_3.png',
+        thumb: '../img/products/chairs/chair_1/chair_1.png',
       },
       {
-        src: '../img/products/chairs/chair_2.png',
-        thumb: '../img/products/chairs/chair_2.png',
+        src: '../img/products/chairs/chair_1/gallery_4.png',
+        thumb: '../img/products/chairs/chair_1/chair_1.png',
       },
     ];
     flsModules.gallery[0].galleryClass.refresh(items)

@@ -9,7 +9,18 @@
       <main class="page">
         <!-- @@include('html/home/_slider.htm', {}) -->
         <br>
-        
+        @@include('html/components/products/_featured.htm', {
+          "name": "Cantilever chair",
+          "image": "../../../img/products/chairs/chair_1/chair_1.png",
+          "code": "Y523201",
+          "cost": "42.00"
+        })
+        @@include('html/components/products/_featured.htm', {
+          "name": "Cantilever chair",
+          "image": "../../../img/products/chairs/chair_2/chair_2.png",
+          "code": "Y523201",
+          "cost": "42.00"
+        })
         @@include('html/components/common/_alert.htm', {
           "icon": "ok",
           "text": "Copied to clipboard!"
@@ -98,7 +109,7 @@
 <!-- product featured -->
 <!-- @@include('html/components/products/_featured.htm', {
   "name": "Cantilever chair",
-  "image": "../../../img/products/chairs/chair_1.png",
+  "image": "../../../img/products/chairs/chair_1/chair_1.png",
   "code": "Y523201",
   "cost": "42.00"
 }) -->
