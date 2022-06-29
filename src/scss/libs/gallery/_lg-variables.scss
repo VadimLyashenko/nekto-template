@@ -5,13 +5,18 @@ $lg-toolbar-bg: linear-gradient(
   rgba(0, 0, 0, 0.4)
 ) !default;
 $lg-border-radius-base: 2px !default;
-$lg-theme-highlight: rgb(169, 7, 7) !default;
-$lg-theme-color: #000 !default;
+$lg-theme-highlight: #fb2e86;
+// $lg-theme-highlight: rgb(169, 7, 7) !default;
+$lg-theme-color: #fff;
+// $lg-theme-color: #000 !default;
 
 // basic icon colours
-$lg-icon-bg: rgba(0, 0, 0, 0.45) !default;
-$lg-icon-color: #999 !default;
-$lg-icon-hover-color: #fff !default;
+$lg-icon-bg: none;
+// $lg-icon-bg: rgba(0, 0, 0, 0.45) !default;
+$lg-icon-color: #666;
+// $lg-icon-color: #999 !default;
+$lg-icon-hover-color: #999;
+// $lg-icon-hover-color: #fff !default;
 
 // counter
 $lg-counter-color: #e6e6e6 !default;
@@ -50,7 +55,8 @@ $lg-sub-html-color: #eee !default;
 // thumbnail toggle button
 $lg-thumb-toggle-bg: #0d0a0a !default;
 $lg-thumb-toggle-color: $lg-icon-color !default;
-$lg-thumb-bg: #0d0a0a !default;
+$lg-thumb-bg: #fff;
+// $lg-thumb-bg: #0d0a0a !default;
 $lg-thumb-container-height: 100px;
 
 // Pager

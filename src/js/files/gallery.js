@@ -1,4 +1,3 @@
-
 /*
 Документация плагина: https://www.lightgalleryjs.com/docs/
 */
