@@ -1,0 +1,51 @@
+<div class="details" data-id=@@id>
+  <div class="details__thumb-wrap">
+    <div data-gallery class="gallery-container">
+      <img src="@@thumb_1" alt="">
+    </div>
+    <div data-gallery class="gallery-container">
+      <img src="@@thumb_2" alt="">
+    </div>
+    <div data-gallery class="gallery-container">
+      <img src="@@thumb_3" alt="">
+    </div>
+  </div>
+  <div class="details__img">
+    <div data-gallery class="gallery-container">
+      <img src="@@image" alt="">
+    </div>
+  </div>
+  <div class="details__content">
+    <h2 class="details__name">@@name</h2>
+    @@include('../common/_rating.htm', {
+      "star_1_color": "yellow",
+      "star_2_color": "yellow",
+      "star_3_color": "yellow",
+      "star_4_color": "yellow",
+      "star_5_color": "gray",
+      "count": 43
+    })
+    <div class="details__cost">
+      $@@cost &nbsp;
+      <span class="details__old-cost">$@@old_cost</span>
+    </div>
+    <p class="details__description">
+      @@description
+    </p>
+    @@include('../common/_button.htm', {
+      "text": "Add To Cart",
+      "link": "shop.html",
+      "mod": " button_color_green"
+    })
+    <div>Categories: 
+      <span class="details__categories">@@categories</span>
+    </div>
+    <div>Share: 
+        <span class="details__socials socials">
+          <a href="" class="socials__social icon-fb"></a>
+          <a href="" class="socials__social icon-inst"></a>
+          <a href="" class="socials__social icon-twit"></a>
+        </span>
+    </div>
+  </div>
+</div>

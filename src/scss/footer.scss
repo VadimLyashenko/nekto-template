@@ -1,6 +1,29 @@
 .footer {
   position: relative;
   z-index: 1;
+
+  .socials {
+    position: absolute;
+    display: flex;
+    right: 18px;
+    gap: rem(10);
+    @media (max-width: $mobile) {
+      margin-right: -10px;
+      gap: rem(6);
+    }
+    &__social {
+      background-color: #151875;
+      border-radius: 50%;
+      padding: 6px;
+      font-size: rem(12);
+      &::before {
+        color: $white;
+      }
+      @media (max-width: $mobile) {
+        font-size: rem(16);
+      }
+    }
+  }
 }
 
 .top-footer {
@@ -108,29 +131,6 @@
         font-size: rem(12);
         letter-spacing: 0.5px;
       }
-    }
-  }
-}
-
-.socials {
-  position: absolute;
-  display: flex;
-  right: 18px;
-  gap: rem(10);
-  @media (max-width: $mobile) {
-    margin-right: -10px;
-    gap: rem(6);
-  }
-  &__social {
-    background-color: #151875;
-    border-radius: 50%;
-    padding: 6px;
-    font-size: rem(12);
-    &::before {
-      color: $white;
-    }
-    @media (max-width: $mobile) {
-      font-size: rem(16);
     }
   }
 }
