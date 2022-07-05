@@ -1,17 +1,21 @@
 <div class="details" data-id=@@id>
-  <div class="details__thumb-wrap">
-    <div data-gallery class="gallery-container">
+  <div class="details__thumb-wrap thumb">
+    <div data-gallery class="thumb__wrap gallery-container">
+      <i class="thumb__icon icon-zoom"></i>
       <img src="@@thumb_1" alt="">
     </div>
-    <div data-gallery class="gallery-container">
+    <div data-gallery class="thumb__wrap gallery-container">
+      <i class="thumb__icon icon-zoom"></i>
       <img src="@@thumb_2" alt="">
     </div>
-    <div data-gallery class="gallery-container">
+    <div data-gallery class="thumb__wrap gallery-container">
+      <i class="thumb__icon icon-zoom"></i>
       <img src="@@thumb_3" alt="">
     </div>
   </div>
-  <div class="details__img">
-    <div data-gallery class="gallery-container">
+  <div class="details__img-wrap">
+    <div data-gallery class="details__img gallery-container">
+      <i class="thumb__icon icon-zoom"></i>
       <img src="@@image" alt="">
     </div>
   </div>
@@ -23,7 +27,7 @@
       "star_3_color": "yellow",
       "star_4_color": "yellow",
       "star_5_color": "gray",
-      "count": 43
+      "count": 37
     })
     <div class="details__cost">
       $@@cost &nbsp;
@@ -34,18 +38,19 @@
     </p>
     @@include('../common/_button.htm', {
       "text": "Add To Cart",
-      "link": "shop.html",
-      "mod": " button_color_green"
+      "link": "",
+      "mod": " button_color_pink details__add"
     })
-    <div>Categories: 
-      <span class="details__categories">@@categories</span>
+    <div class="details__tag">Categories: 
+      <span>@@categories.category_1</span>
+      <span>@@categories.category_2</span>
     </div>
-    <div>Share: 
-        <span class="details__socials socials">
-          <a href="" class="socials__social icon-fb"></a>
-          <a href="" class="socials__social icon-inst"></a>
-          <a href="" class="socials__social icon-twit"></a>
-        </span>
+    <div class="details__tag">Share: 
+      <span class="details__socials socials">
+        <a href="" class="socials__social icon-fb"></a>
+        <a href="" class="socials__social icon-inst"></a>
+        <a href="" class="socials__social icon-twit"></a>
+      </span>
     </div>
   </div>
 </div>
