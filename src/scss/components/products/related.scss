@@ -1,0 +1,33 @@
+.related {
+  max-width: rem(270);
+  color: $prodText;
+  font-family: 'Josefin Sans', serif;
+
+  &__img {
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 2px;
+    img {
+      width: 100%;
+    }
+  }
+
+  &__details {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: rem(4);
+  }
+
+  &__name {
+    font-weight: 600;
+    line-height: rem(42);
+  }
+
+  &__cost {
+    flex-basis: 100%;
+    font-size: rem(14);
+  }
+}
