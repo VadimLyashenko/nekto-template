@@ -8,7 +8,7 @@
 // Пример: { Navigation, Autoplay }
 import Swiper, { Pagination, Autoplay } from 'swiper';
 /*
-Основниые модули слайдера:
+Основные модули слайдера:
 Navigation, Pagination, Autoplay, 
 EffectFade, Lazy, Manipulation
 Подробнее смотри https://swiperjs.com/
@@ -24,13 +24,8 @@ import "../../scss/libs/swiper.scss";
 
 // Инициализация слайдеров
 function initSliders() {
-  // Перечень слайдеров
-  // Проверяем, есть ли слайдер на странице
-  if (document.querySelector('.swiper')) { // Указываем класс нужного слайдера
-    // Создаем слайдер
-    new Swiper('.swiper', { // Указываем скласс нужного слайдера
-      // Подключаем модули слайдера
-      // для конкретного случая
+  if (document.querySelector('.slider__swiper')) {
+    new Swiper('.slider__swiper', {
       modules: [Pagination, Autoplay],
       observer: true,
       observeParents: true,
@@ -59,14 +54,12 @@ function initSliders() {
       },
       */
 
-      // Пагинация
       pagination: {
-        el: '.swiper-pagination',
+        el: '.slider__pagination',
         clickable: true,
       },
       
 
-      // Скроллбар
       /*
       scrollbar: {
         el: '.swiper-scrollbar',
@@ -80,7 +73,6 @@ function initSliders() {
       //   nextEl: '.swiper-button-next',
       // },
 
-      // Брейкпоинты
       /*
       breakpoints: {
         320: {
