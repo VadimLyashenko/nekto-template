@@ -77,16 +77,21 @@
 
   &__pagination {
     bottom: 30px!important;
-    // width: 11px;
-    // height: 11px;
-    // transform: rotate(-45deg);
-    // display: inline-block;
-    // // border-radius: 50%;
-    // background: #fff;
-    // border: 1px solid #fb2e86;
-    // // opacity: var(--swiper-pagination-bullet-inactive-opacity, 0.2);
     @media (max-width: $mobile) {
       bottom: 15px!important;
     }
+  }
+
+  & .swiper-pagination-bullet {
+    width: 11px;
+    height: 11px;
+    border-radius: 0;
+    transform: rotate(-45deg);
+    background: #fff;
+    border: 1px solid $accent;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background: $accent;
   }
 }
