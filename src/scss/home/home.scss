@@ -1,2 +1,13 @@
 @import "slider";
 @import "featured-slider";
+
+.section-name {
+  text-align: center;
+  font-family: "Josefin Sans", serif;
+  font-size: rem(42);
+  font-weight: 700;
+  color: #1A0B5B;
+  @media(max-width: $mobileSmall) {
+    font-size: rem(24);
+  }
+}

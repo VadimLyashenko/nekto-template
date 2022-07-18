@@ -1,0 +1,38 @@
+.featured-slider {
+  &__swiper {
+    margin-top: rem(40);
+    @media(max-width: $mobileSmall) {
+      margin-top: rem(20);
+    }
+  }
+
+  &__pagination {
+    bottom: 0!important;
+    margin-top: rem(40);
+    @media(max-width: $mobileSmall) {
+      margin-top: rem(20);
+    }
+  }
+
+  & .swiper-pagination{
+    position: relative;
+  }
+
+  & .swiper-pagination-bullet {
+    width: rem(16);
+    height: rem(6);
+    border-radius: 10px;
+    background: #FEBAD7;
+    transition: width 0.2s linear;
+    opacity: 1;
+    @media(max-width: $mobileSmall) {
+      width: rem(14);
+      height: rem(8);
+    }
+  }
+
+  & .swiper-pagination-bullet-active {
+    background: $accent;
+    width: rem(24);
+  }
+}
