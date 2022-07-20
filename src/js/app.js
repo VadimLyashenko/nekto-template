@@ -44,7 +44,7 @@ flsFunctions.spollers();
 Модуль работы с табами
 Сниппет (HTML): tabs
 */
-// flsFunctions.tabs();
+flsFunctions.tabs();
 
 /*
 Модуль "показать еще"
@@ -74,7 +74,7 @@ import * as flsForms from "./files/forms/forms.js";
 /* Oтправка формы */
 // flsForms.formSubmit();
 
-/* Модуль формы "колличество" */
+/* Модуль формы "количество" */
 // flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */

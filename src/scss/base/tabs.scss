@@ -1,23 +1,19 @@
 .tabs {
-  // .tabs__navigation
+  
   &__navigation {
     display: flex;
+    margin-bottom: rem(30);
   }
-  // .tabs__title
+
   &__title {
-    border: 1px solid #eee;
+    font-size: rem(18);
+    color: $prodText;
     padding: rem(10) rem(15);
-    border-radius: rem(5);
+    transition: color 0.1s ease;
     &._tab-active {
-      border: 1px solid #000;
+      color: $accent;
+      text-decoration: underline;
+      text-underline-offset: 3px;
     }
   }
-  // .tabs__content
-  &__content {
-    border: 1px solid #eee;
-    padding: rem(10) rem(15);
-  }
-  // .tabs__body
-  // &__body {
-  // }
 }
