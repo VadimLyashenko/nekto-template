@@ -7,9 +7,10 @@
 
   &__img {
     width: rem(65);
+    height: rem(65);
     display: inline-block;
     img {
-      width: 100%;
+      // width: 100%;
     }
   }
 

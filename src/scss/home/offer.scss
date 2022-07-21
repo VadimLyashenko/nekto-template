@@ -1,0 +1,10 @@
+.offer{
+  
+  &__content {
+    display: flex;
+    gap: rem(20);
+    justify-content: center;
+    margin-top: rem(64);
+    flex-wrap: wrap;
+  }
+}
