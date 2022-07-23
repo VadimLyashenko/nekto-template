@@ -1,16 +1,25 @@
 .unique-features {
   background-color: #F1F0FF;
   padding: rem(30);
+  @media(max-width: $tablet) {
+    padding: rem(18) rem(10);
+  }
 
   &__container{
     display: flex;
     gap: rem(50);
+    @media(max-width: $tablet) {
+      gap: rem(16);
+    }
   }
 
   &__img {
     max-width: rem(490);
     img{
       width: 100%;
+    }
+    @media(max-width: $mobile) {
+      display: none;
     }
   }
 
@@ -23,11 +32,21 @@
       font-weight: 700;
       line-height: math.div(48, 35);
       margin-bottom: rem(20);
+      @media(max-width: $tablet) {
+        font-size: rem(24);
+        margin-bottom: rem(6);
+      }
+    }
+    @media(max-width: $mobileSmall) {
+      margin-top: 0;
     }
   }
 
   &__list {
     margin-bottom: rem(34);
+    @media(max-width: $mobileSmall) {
+      margin-bottom: 0;
+    }
   }
 
   &__list-item {
@@ -51,6 +70,9 @@
     display: flex;
     align-items: center;
     gap: rem(18);
+    @media(max-width: $mobile) {
+      display: none;
+    }
   }
 
   &__product{
@@ -64,8 +86,5 @@
     font-weight: 600;
     font-family: "Josefin Sans", serif;
     margin-bottom: rem(6);
-  }
-
-  &__cost {
   }
 }
