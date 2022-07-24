@@ -1,15 +1,15 @@
 .trending {
-  max-width: rem(270);
   padding: rem(11) rem(11) rem(28) rem(11);
   background-color: #fff;
   color: $prodText;
+  box-shadow: 1px 0px 26px -3px rgba(0, 0, 0, 0.15);
 
   &__img {
     width: 100%;
     background-color: #f5f5f5;
-    padding: rem(40) rem(35)  rem(35)  rem(35);
+    padding: rem(40) rem(35) rem(35) rem(35);
     @media (max-width: $mobileSmall) {
-      padding: rem(20) rem(16)  rem(16)  rem(16);
+      padding: rem(20) rem(16) rem(16) rem(16);
     }
     img {
       width: 100%;
@@ -29,7 +29,7 @@
   }
 
   &__cost {
-    font-family: 'Josefin Sans', serif;
+    font-family: "Josefin Sans", serif;
     font-size: rem(14);
   }
 
