@@ -140,6 +140,57 @@ function initSliders() {
       },
     });
   }
+  if (document.querySelector('.top-categories__swiper')) {
+    new Swiper('.top-categories__swiper', {
+      modules: [Pagination, Autoplay],
+      observer: true,
+      observeParents: true,
+      speed: 800,
+      loop: true,
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: true,
+      },
+
+      pagination: {
+        el: '.top-categories__pagination',
+        clickable: true,
+      },
+      
+      breakpoints: {
+        0: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 15,
+        },
+        320: {
+          slidesPerView: 1,
+          slidesPerGroup: 1,
+          spaceBetween: 15,
+        },
+        398: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          slidesPerGroup: 3,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
+        },
+        1268: {
+          slidesPerView: 4,
+          slidesPerGroup: 4,
+          spaceBetween: 30,
+        },
+      },
+    });
+  }
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {

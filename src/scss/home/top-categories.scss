@@ -1,5 +1,9 @@
-.featured-slider {
+.top-categories {
   
+  &__container {
+    padding: 0 rem(15) !important;
+  }
+
   &__swiper {
     margin-top: rem(40);
     @media (max-width: $mobileSmall) {
@@ -20,20 +24,16 @@
   }
 
   & .swiper-pagination-bullet {
-    width: rem(16);
-    height: rem(6);
-    border-radius: 10px;
-    background: #febad7;
-    transition: width 0.2s linear;
+    width: rem(12);
+    height: rem(12);
+    border-radius: 50%;
+    background-color: transparent;
+    border: rem(1) $accent solid;
+    transition: background-color 0.2s linear;
     opacity: 1;
-    @media (max-width: $mobileSmall) {
-      width: rem(14);
-      height: rem(8);
-    }
   }
 
   & .swiper-pagination-bullet-active {
-    background: $accent;
-    width: rem(24);
+    background-color: $accent;
   }
 }
