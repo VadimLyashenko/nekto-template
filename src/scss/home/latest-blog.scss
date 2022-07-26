@@ -1,0 +1,46 @@
+.get-update {
+  background-image: url("../../img/get-update-bg.png");
+  background-position: center center;
+  background-size: cover;
+  text-align: center;
+  padding: rem(174) 0 rem(103) 0;
+  @media (max-width: $mobile) {
+    padding: rem(80) 0 rem(50) 0;
+  }
+
+  &__title {
+    color: $prodText;
+    font-size: rem(35);
+    font-family: "Josefin Sans", serif;
+    font-weight: 700;
+    margin-bottom: rem(28);
+    line-height: math.div(40, 28);
+    @media (max-width: $mobile) {
+      font-size: rem(28);
+    }
+  }
+}
+
+.latest-blog {
+  
+  &__container {
+    margin-top: rem(80);
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: rem(48);
+    row-gap: rem(20);
+    justify-content: center;
+    @media (max-width: $pc) {
+      margin-top: rem(40);
+      column-gap: rem(20);
+    }
+    @media (max-width: $tablet) {
+      column-gap: rem(15);
+      row-gap: rem(15);
+      grid-template-columns: auto auto;
+    }
+    @media (max-width: $mobile) {
+      grid-template-columns: auto;
+    }
+  }
+}
