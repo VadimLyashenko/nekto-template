@@ -10,9 +10,6 @@
   @include adaptiveValue("padding-bottom", 25, 10);
   @include adaptiveValue("padding-left", 50, 10);
   @include adaptiveValue("padding-right", 50, 10);
-  @media (max-width: $mobileSmall) {
-    display: none;
-  }
 
   &__link {
     fill: #D2D1D1;
@@ -30,5 +27,11 @@
 
   &__img {
     height: 80px;
+  }
+}
+
+.brands__wrap{
+  @media (max-width: $mobileSmall) {
+    display: none;
   }
 }

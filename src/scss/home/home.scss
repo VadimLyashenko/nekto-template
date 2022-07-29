@@ -13,8 +13,24 @@
   font-family: "Josefin Sans", serif;
   font-size: rem(42);
   font-weight: 700;
-  color: #1A0B5B;
-  @media(max-width: $mobileSmall) {
+  color: #1a0b5b;
+  @media (max-width: $mobileSmall) {
     font-size: rem(24);
+  }
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: rem(180);
+  margin-bottom: rem(120);
+  @media (max-width: $pc) {
+    gap: rem(160);
+  }
+  @media (max-width: $tablet) {
+    gap: rem(120);
+  }
+  @media (max-width: $mobileSmall) {
+    gap: rem(84);
   }
 }

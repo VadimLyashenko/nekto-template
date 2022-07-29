@@ -6,5 +6,8 @@
     justify-content: center;
     margin-top: rem(64);
     flex-wrap: wrap;
+    @media (max-width: $mobileSmall) {
+      margin-top: rem(32);
+    }
   }
 }

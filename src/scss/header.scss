@@ -125,6 +125,7 @@
   top: 0;
   transition: all 0.3s ease 0s;
   z-index: 5;
+  box-shadow: 0 0 3px #eee;
 
   @media (max-width: $mobile) {
     max-height: 80px;
