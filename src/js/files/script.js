@@ -60,6 +60,25 @@ let items_2 = [
   },
 ];
 
+let items_3 = [
+  {
+    src: '../img/products/chairs/chair_3/gallery_1.png',
+    thumb: '../img/products/chairs/chair_3/thumb_1.png',
+  },
+  {
+    src: '../img/products/chairs/chair_3/gallery_2.png',
+    thumb: '../img/products/chairs/chair_3/thumb_2.png',
+  },
+  {
+    src: '../img/products/chairs/chair_3/gallery_3.png',
+    thumb: '../img/products/chairs/chair_3/thumb_3.png',
+  },
+  {
+    src: '../img/products/chairs/chair_3/gallery_4.png',
+    thumb: '../img/products/chairs/chair_3/thumb_4.png',
+  },
+];
+
 galleries.forEach(gallery => {
 
   flsModules.gallery[0].galleryClass.getMediaContainerPosition = function () {
@@ -78,8 +97,12 @@ galleries.forEach(gallery => {
 
     if(id === 1) {
       flsModules.gallery[0].galleryClass.refresh(items_1)
-    } else {
+    }
+    if (id === 2) {
       flsModules.gallery[0].galleryClass.refresh(items_2)
+    } 
+    if (id === 3) {
+      flsModules.gallery[0].galleryClass.refresh(items_3)
     }
     
     flsModules.gallery[0].galleryClass.openGallery()

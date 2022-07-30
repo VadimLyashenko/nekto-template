@@ -3,14 +3,15 @@
   box-shadow: 1px 0px 26px -3px rgba(0, 0, 0, 0.15);
   text-align: center;
   color: $prodText;
-  &:hover {
-    color: #fff;
-  }
   &:hover &__icon {
     visibility: visible;
     opacity: 1;
   }
+  &:hover .icon-zoom{
+    opacity: 0.9;
+  }
   &:hover &__details {
+    color: #fff;
     background: #2F1AC4;
   }
   &:hover &__name {
@@ -35,41 +36,59 @@
 
   &__icon {
     cursor: pointer;
+    color: #535399;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s ease;
     position: absolute;
     font-size: rem(20);
-    background:linear-gradient(to right bottom, #1389FF, #1DB4E7);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    &:hover {
-      background: #2F1AC4;
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+    @media(max-width: $mobile) {
+      opacity: 1;
     }
   }
   
   & .icon-cart {
     top: 7%;
     left: 7%;
+    @media(max-width: $mobile) {
+      font-size: rem(22);
+    }
   }
 
   & .icon-heart {
     top: 7%;
     left: 20%;
     font-size: rem(18);
+    @media(max-width: $mobile) {
+      font-size: rem(20);
+      left: 24%;
+    }
   }
 
   & .icon-zoom {
+    color: inherit;
+    opacity: 0;
+    font-size: rem(20);
     cursor: zoom-in;
+    position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: rem(24);
+    width: rem(36);
+    height: rem(36);
+    background: rgba(230, 230, 230, 0.5);
+    border-radius: 50%;
+    &::before {
+      line-height: math.div(36, 20);
+    }
+    @media(max-width: $mobile) {
+      top: auto;
+      left: auto;
+      bottom: -5%;
+      right: -5%;
+      opacity: 0.9;
+    }
   }
-
 
   &__details {
     display: flex;
