@@ -6,7 +6,7 @@
 // Подключаем слайдер Swiper из node_modules
 // При необходимости подключаем дополнительные модули слайдера, указывая их в {} через запятую
 // Пример: { Navigation, Autoplay }
-import Swiper, { Pagination, Autoplay } from 'swiper';
+import Swiper, { Pagination, Autoplay } from "swiper";
 /*
 Основные модули слайдера:
 Navigation, Pagination, Autoplay, 
@@ -22,8 +22,8 @@ import "../../scss/libs/swiper.scss";
 
 // Инициализация слайдеров
 function initSliders() {
-  if (document.querySelector('.slider__swiper')) {
-    new Swiper('.slider__swiper', {
+  if (document.querySelector(".slider__swiper")) {
+    new Swiper(".slider__swiper", {
       modules: [Pagination, Autoplay],
       observer: true,
       observeParents: true,
@@ -39,7 +39,6 @@ function initSliders() {
 
       //touchRatio: 0,
       //simulateTouch: false,
-      //loop: true,
       //preloadImages: false,
       //lazy: true,
 
@@ -49,10 +48,9 @@ function initSliders() {
       */
 
       pagination: {
-        el: '.slider__pagination',
+        el: ".slider__pagination",
         clickable: true,
       },
-      
 
       /*
       scrollbar: {
@@ -89,13 +87,11 @@ function initSliders() {
       },
       */
       // События
-      on: {
-
-      }
+      on: {},
     });
   }
-  if (document.querySelector('.featured-slider__swiper')) {
-    new Swiper('.featured-slider__swiper', {
+  if (document.querySelector(".featured-slider__swiper")) {
+    new Swiper(".featured-slider__swiper", {
       modules: [Pagination, Autoplay],
       observer: true,
       observeParents: true,
@@ -103,14 +99,15 @@ function initSliders() {
       loop: true,
       autoplay: {
         delay: 4000,
-        disableOnInteraction: true,
+        pauseOnMouseEnter: true,
+        disableOnInteraction: false,
       },
 
       pagination: {
-        el: '.featured-slider__pagination',
+        el: ".featured-slider__pagination",
         clickable: true,
       },
-      
+
       breakpoints: {
         320: {
           slidesPerView: 1,
@@ -140,8 +137,8 @@ function initSliders() {
       },
     });
   }
-  if (document.querySelector('.top-categories__swiper')) {
-    new Swiper('.top-categories__swiper', {
+  if (document.querySelector(".top-categories__swiper")) {
+    new Swiper(".top-categories__swiper", {
       modules: [Pagination, Autoplay],
       observer: true,
       observeParents: true,
@@ -153,10 +150,10 @@ function initSliders() {
       },
 
       pagination: {
-        el: '.top-categories__pagination',
+        el: ".top-categories__pagination",
         clickable: true,
       },
-      
+
       breakpoints: {
         0: {
           slidesPerView: 1,
@@ -194,23 +191,24 @@ function initSliders() {
 }
 // Скролл на базе слайдера (по классу swiper_scroll для оболочки слайдера)
 function initSlidersScroll() {
-  let sliderScrollItems = document.querySelectorAll('.swiper_scroll');
+  let sliderScrollItems = document.querySelectorAll(".swiper_scroll");
   if (sliderScrollItems.length > 0) {
     for (let index = 0; index < sliderScrollItems.length; index++) {
       const sliderScrollItem = sliderScrollItems[index];
-      const sliderScrollBar = sliderScrollItem.querySelector('.swiper-scrollbar');
+      const sliderScrollBar =
+        sliderScrollItem.querySelector(".swiper-scrollbar");
       const sliderScroll = new Swiper(sliderScrollItem, {
         observer: true,
         observeParents: true,
-        direction: 'vertical',
-        slidesPerView: 'auto',
+        direction: "vertical",
+        slidesPerView: "auto",
         freeMode: {
           enabled: true,
         },
         scrollbar: {
           el: sliderScrollBar,
           draggable: true,
-          snapOnRelease: false
+          snapOnRelease: false,
         },
         mousewheel: {
           releaseOnEdges: true,

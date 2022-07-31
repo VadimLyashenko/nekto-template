@@ -7,12 +7,12 @@
     visibility: visible;
     opacity: 1;
   }
-  &:hover .icon-zoom{
-    opacity: 0.9;
+  &:hover .icon-zoom {
+    opacity: 0;
   }
   &:hover &__details {
     color: #fff;
-    background: #2F1AC4;
+    background: #2f1ac4;
   }
   &:hover &__name {
     color: #fff;
@@ -25,12 +25,15 @@
 
   &__img {
     position: relative;
-    background-color: #F6F7FB;
+    background-color: #f6f7fb;
     width: 100%;
     padding: rem(38) rem(38) rem(12) rem(38);
     img {
       width: 100%;
       cursor: zoom-in;
+      &:hover + .icon-zoom {
+        opacity: 0.9;
+      }
     }
   }
 
@@ -41,15 +44,15 @@
     transition: visibility 0s, opacity 0.3s ease;
     position: absolute;
     font-size: rem(20);
-    @media(max-width: $mobile) {
+    @media (max-width: $mobile) {
       opacity: 1;
     }
   }
-  
+
   & .icon-cart {
     top: 7%;
     left: 7%;
-    @media(max-width: $mobile) {
+    @media (max-width: $mobile) {
       font-size: rem(22);
     }
   }
@@ -58,7 +61,7 @@
     top: 7%;
     left: 20%;
     font-size: rem(18);
-    @media(max-width: $mobile) {
+    @media (max-width: $mobile) {
       font-size: rem(20);
       left: 24%;
     }
@@ -66,11 +69,8 @@
 
   & .icon-zoom {
     color: inherit;
-    opacity: 0;
     font-size: rem(20);
     cursor: zoom-in;
-    position: absolute;
-    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -81,7 +81,10 @@
     &::before {
       line-height: math.div(36, 20);
     }
-    @media(max-width: $mobile) {
+    &:hover {
+      opacity: 0.9;
+    }
+    @media (max-width: $mobile) {
       top: auto;
       left: auto;
       bottom: -5%;
@@ -94,7 +97,7 @@
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    padding: rem(4)  rem(4)  rem(17) rem(4);
+    padding: rem(4) rem(4) rem(17) rem(4);
     transition: all 0.3s ease 0s;
   }
 
@@ -131,7 +134,7 @@
   }
 
   &__code {
-    font-family: 'Josefin Sans', serif;
+    font-family: "Josefin Sans", serif;
     font-weight: 400;
     font-size: rem(14);
     line-height: rem(42);
@@ -148,4 +151,3 @@
     font-size: rem(14);
   }
 }
-
