@@ -1,5 +1,5 @@
 .tabs {
-  
+
   &__navigation {
     display: flex;
     margin-bottom: rem(30);
@@ -10,6 +10,13 @@
     color: $prodText;
     padding: rem(10) rem(15);
     transition: color 0.1s ease;
+    @media (max-width: $mobile) {
+      font-size: rem(16);
+    }
+    @media (max-width: $mobileSmall) {
+      font-size: rem(16);
+      padding: rem(6) rem(6);
+    }
     &._tab-active {
       color: $accent;
       text-decoration: underline;

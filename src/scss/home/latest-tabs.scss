@@ -1,5 +1,5 @@
 .latest-tabs {
-
+  
   &__container {
     margin-top: rem(12);
     display: flex;
@@ -7,17 +7,17 @@
     align-items: center;
   }
 
-  &__content{
+  &__content {
     display: grid;
     grid-template-columns: auto auto auto;
     column-gap: rem(36);
     row-gap: rem(64);
-    @media(max-width: $tablet) {
+    @media (max-width: $tablet) {
       grid-template-columns: auto auto;
       column-gap: rem(24);
       row-gap: rem(36);
     }
-    @media(max-width: $mobileSmall) {
+    @media (max-width: $mobileSmall) {
       grid-template-columns: auto;
       column-gap: rem(24);
       row-gap: rem(36);

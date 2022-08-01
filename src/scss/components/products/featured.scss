@@ -87,9 +87,10 @@
     @media (max-width: $mobile) {
       top: auto;
       left: auto;
-      bottom: -5%;
-      right: -5%;
+      bottom: 4%;
+      right: 4%;
       opacity: 0.9;
+      transform: none;
     }
   }
 
