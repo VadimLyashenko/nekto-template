@@ -1,5 +1,5 @@
 .discount-tabs {
-  
+
   &__container {
     margin-top: rem(12);
     display: flex;
@@ -28,9 +28,15 @@
       font-family: "Josefin Sans", serif;
       color: $prodText;
       margin-bottom: rem(18);
-      @media (max-width: $mobile) {
+      @media (max-width: $pc) {
         font-size: rem(32);
       }
+    }
+
+    &__img-container {
+      display: flex;
+      justify-content: center;
+      margin: rem(16) 0;
     }
 
     &__name {
@@ -48,7 +54,7 @@
       color: #b7bacb;
       line-height: math.div(24, 17);
       margin-bottom: rem(28);
-      @media (max-width: $mobile) {
+      @media (max-width: $pc) {
         font-size: rem(15);
       }
     }
@@ -83,9 +89,6 @@
       width: 64%;
       img {
         width: 100%;
-      }
-      @media (max-width: $mobile) {
-        display: none;
       }
     }
   }
