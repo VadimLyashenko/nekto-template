@@ -175,6 +175,25 @@ function initGalleries() {
     },
   ];
 
+  let items_9 = [
+    {
+      src: "../img/products/chairs/chair_9/gallery_1.png",
+      thumb: "../img/products/chairs/chair_9/thumb_1.png",
+    },
+    {
+      src: "../img/products/chairs/chair_9/gallery_2.png",
+      thumb: "../img/products/chairs/chair_9/thumb_2.png",
+    },
+    {
+      src: "../img/products/chairs/chair_9/gallery_3.png",
+      thumb: "../img/products/chairs/chair_9/thumb_3.png",
+    },
+    {
+      src: "../img/products/chairs/chair_9/gallery_4.png",
+      thumb: "../img/products/chairs/chair_9/thumb_4.png",
+    },
+  ];
+
 
   galleries.forEach((gallery) => {
     flsModules.gallery[0].galleryClass.getMediaContainerPosition = function () {
@@ -219,6 +238,10 @@ function initGalleries() {
 
       if (id === 8) {
         flsModules.gallery[0].galleryClass.refresh(items_8);
+      }
+
+      if (id === 9) {
+        flsModules.gallery[0].galleryClass.refresh(items_9);
       }
 
 
