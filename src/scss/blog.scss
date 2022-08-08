@@ -1,0 +1,42 @@
+.blog {
+  margin-top: rem(125);
+  margin-bottom: rem(100);
+
+  &__container {
+    display: flex;
+    gap: rem(50);
+  }
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: rem(24);
+  }
+
+  &__pagination {
+    display: flex;
+    gap: rem(36);
+    justify-content: center;
+
+    &__item {
+      color: #e0d3f5;
+      font-weight: 600;
+      border: 1px #e0d3f5 solid;
+      padding: rem(4) rem(10);
+      border-radius: 4px;
+      transition: all 0.2s ease 0s;
+      &_active {
+        background-color: $accent;
+        color: #fff;
+      }
+      &:hover {
+        background-color: $accent;
+        color: #fff;
+      }
+    }
+  }
+
+  &__aside {
+    display: flex;
+  }
+}

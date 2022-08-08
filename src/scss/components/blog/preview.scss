@@ -18,7 +18,7 @@
   }
 
   &__content-top {
-    font-family: 'Josefin Sans', serif;
+    font-family: "Josefin Sans", serif;
     font-size: rem(14);
     font-weight: 400;
     display: flex;
@@ -42,7 +42,7 @@
     align-items: center;
     &::before {
       font-size: rem(14);
-      color: #FFA454;
+      color: #ffa454;
       margin-right: em(8);
       display: inline;
       margin-bottom: 2px;
@@ -51,7 +51,7 @@
 
   &__headline {
     display: inline-block;
-    font-family: 'Josefin Sans', serif;
+    font-family: "Josefin Sans", serif;
     font-weight: 700;
     font-size: rem(20);
     line-height: math.div(28, 18);
@@ -68,7 +68,7 @@
 
   &__description {
     line-height: math.div(30, 16);
-    color: #72718F;
+    color: #72718f;
     text-align: justify;
     @media (max-width: $mobileSmall) {
       font-size: rem(14);
@@ -77,7 +77,7 @@
 
   &__link {
     line-height: math.div(60, 16);
-    text-decoration-line: underline!important;
+    text-decoration-line: underline !important;
     text-underline-offset: 4px;
     transition: color 0.3s ease 0s;
     &:hover {

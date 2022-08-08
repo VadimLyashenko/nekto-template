@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/_head.htm',{
+    "title": "Nekto Shop: Blog"
+  })
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        @@include('html/components/common/_page-headline.htm', {
+          "headline": "Blog",
+          "breadcrumb_1": { "name": "Home", "link": "/" },
+          "breadcrumb_2": { "name": "Pages", "link": "/blog.html" },
+          "breadcrumb_3": "Blog"
+        })
+        <section class="blog">
+          <div class="blog__container">
+            <div class="blog__main">
+              @@include('html/components/blog/_big-preview.htm', {
+                "image": "../../../img/blog/big_pre1.jpg",
+                "author": "John Carpet",
+                "date": "May 01 2022",
+                "headline": "Top esssential Trends in 2022",
+                "description": "The best furniture and beautiful colors excellent materials The best furniture and beautiful colors excellent materials The best furniture and beautiful colors excellent materials"
+              })
+              @@include('html/components/blog/_big-preview.htm', {
+                "image": "../../../img/blog/big_pre2.jpg",
+                "author": "Surf Auxion",
+                "date": "April 29 2022",
+                "headline": "Aenean vitae in aliquam ultrices lectus. Etiam.",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Velit facilisis quis auctor pretium ipsum, eu rutrum. Condimentum eu malesuada vitae ultrices in in neque, porta dignissim. Adipiscing purus, cursus vulputate id id dictum at."
+              })
+              @@include('html/components/blog/_big-preview.htm', {
+                "image": "../../../img/blog/big_pre3.jpg",
+                "author": "Lorem Ipsum",
+                "date": "April 27 2022",
+                "headline": "Sit nam congue feugiat nisl, mauris amet nisi. ",
+                "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, totam vitae perspiciatis accusantium similique autem dicta optio molestias officiis consequatur libero eligendi, nobis voluptatibus corporis earum expedita beatae atque nemo?"
+              })
+              <div class="blog__pagination">
+                <a href="/blog.html" class="blog__pagination__item blog__pagination__item_active">1</a>
+                <a href="/blog.html" class="blog__pagination__item">2</a>
+                <a href="/blog.html" class="blog__pagination__item">3</a>
+                <a href="/blog.html" class="blog__pagination__item">4</a>
+              </div>
+            </div>
+            <aside class="blog__aside">
+              aside
+            </aside>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+    @@include('html/_popup.htm',{})
+    @@include('html/_js.htm',{})
+  </body>
+</html>
