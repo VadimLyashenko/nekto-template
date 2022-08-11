@@ -62,7 +62,7 @@
     font-weight: 700;
     font-size: rem(30);
     line-height: math.div(28, 18);
-    margin: rem(20) 0;
+    margin: rem(16) 0 rem(2) 0;
     transition: color 0.3s ease 0s;
     &:hover {
       color: $accent;
