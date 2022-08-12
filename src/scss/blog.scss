@@ -9,6 +9,7 @@
 
   &__main {
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     gap: rem(28);
   }
@@ -36,7 +37,41 @@
     }
   }
 
-  &__aside {
-    display: flex;
+  .aside {
+    flex: 1 0 22%;
+
+    &__item {
+      position: relative;
+    }
+
+    &__title {
+      font-family: "Josefin Sans", sans-serif;
+      font-size: rem(22);
+      color: $prodText;
+      font-weight: 600;
+      margin-bottom: rem(15);
+    }
+
+    &__search {
+      border: 1px #BDBDD8 solid;
+      border-radius: 2px;
+      width: 100%;
+      padding: rem(10);
+      line-height: rem(20);
+      color: $textBlue;
+      &::placeholder {
+        font-size: rem(14);
+        color: rgba(21, 24, 117, 0.3);
+      }
+    }
+    
+    &__search-icon {
+      position: absolute;
+      bottom: rem(14);
+      right: rem(10);
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 }
