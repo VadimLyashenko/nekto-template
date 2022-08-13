@@ -39,6 +39,9 @@
 
   .aside {
     flex: 1 0 22%;
+    display: flex;
+    flex-direction: column;
+    gap: rem(50);
 
     &__item {
       position: relative;
@@ -71,6 +74,26 @@
       right: rem(10);
       &:hover {
         color: $accent;
+      }
+    }
+
+    &__categories {
+      color: #3F509E;
+      display: grid;
+      grid-template-columns: auto auto;
+      font-family: "Josefin Sans", serif;
+      font-weight: 400;
+      font-size: rem(14);
+      row-gap: rem(12);
+    }
+
+    &__category {
+      padding: rem(8);
+      border-radius: 4px;
+      transition: all 0.1s ease;
+      &:hover {
+        background-color: $accent;
+        color: #fff;
       }
     }
   }
