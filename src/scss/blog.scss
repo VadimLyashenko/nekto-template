@@ -96,5 +96,11 @@
         color: #fff;
       }
     }
+
+    &__posts {
+      display: flex;
+      flex-direction: column;
+      gap: rem(22)
+    }
   }
 }
