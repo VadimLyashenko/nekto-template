@@ -102,5 +102,11 @@
       flex-direction: column;
       gap: rem(22)
     }
+
+    &__offer-products {
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: rem(15);
+    }
   }
 }
