@@ -108,5 +108,29 @@
       grid-template-columns: auto auto;
       gap: rem(15);
     }
+
+    .socials {
+      display: inline-flex;
+      gap: rem(12);
+      margin: 0 rem(12);
+  
+      &__social {
+        background-color: #151875;
+        border-radius: 50%;
+        padding: 6px;
+        font-size: rem(12);
+        &::before {
+          color: $white;
+        }
+      }
+  
+      & .icon-inst {
+        background-color: $accent;
+      }
+
+      & .icon-twit {
+        background-color:#37DAF3;
+      }
+    }
   }
 }
