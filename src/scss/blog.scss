@@ -132,5 +132,19 @@
         background-color:#37DAF3;
       }
     }
+
+    &__tags {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      row-gap: rem(12);
+    }
+
+    &__tag {
+      color: $prodText;
+      text-decoration: underline;
+      &:hover {
+        color: $accent;
+      }
+    }
   }
 }
